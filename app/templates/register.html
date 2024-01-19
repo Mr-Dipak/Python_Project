@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Register Student{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Register a New Student</h1>
+    <form method="post" action="{{ url_for('register') }}">
+        <!-- Add your form fields here -->
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+
+        <!-- Repeat similar structure for other form fields -->
+
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary mt-3">Back to Student List</a>
+{% endblock %}

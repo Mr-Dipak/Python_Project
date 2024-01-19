@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Student List{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Student List</h1>
+    <ul class="list-group">
+        {% for student in students %}
+            <li class="list-group-item">{{ student.first_name }} {{ student.last_name }} - {{ student.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('register') }}" class="btn btn-primary mt-3">Register a new student</a>
+{% endblock %}
